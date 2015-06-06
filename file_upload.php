@@ -29,5 +29,7 @@ if(!empty($_POST["submit"])) {
 	if ($uploadOk == 1) {
 		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $file_name);
 	}
+	session_start();
+	$_SESSION['img'] = $file_name;
 }
 ?>

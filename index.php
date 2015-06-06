@@ -11,7 +11,7 @@
 				<p>Подател</p>
 				<input type = "text"placeholder = "име" name = "fname" /><br>
 				<input type = "text"placeholder = "фамилия" name = "lname" style = "margin-top:2px;" /><br>
-				<input type = "text"placeholder = "ел.поща" name = "email" style = "margin-top:2px;" /><br>
+				<input type = "email"placeholder = "ел.поща" name = "email" style = "margin-top:2px;" /><br>
 				<input type = "text"placeholder = "телефон" name = "number" style = "margin-top:2px;" /><br>
 				
 				<p>Сигнал</p>
@@ -20,6 +20,16 @@
 				
 				Select image to upload:
 				<input type="file" name="fileToUpload" id="fileToUpload"><br>
+				<select style = "width:100px;" name = "inst">
+					<option value = "МВР">МВР</option>
+					<option value = "БДЖ">БДЖ</option>
+					<option value = "Столична община">Столична община</option>
+					<option value = "Закрила на децата">Закрила на децата</option>
+					<option value = "Министерство на труда и социалната политика">Министерство на труда и социалната политика</option>
+					<option value = "Министерство на икономиката, енергетиката и туризма">Министерство на икономиката, енергетиката и туризма</option>
+					<option value = "МИНИСТЕРСТВО НА РЕГИОНАЛНОТО РАЗВИТИЕ И БЛАГОУСТРОЙСТВОТО">МИНИСТЕРСТВО НА РЕГИОНАЛНОТО РАЗВИТИЕ И БЛАГОУСТРОЙСТВОТО</option>
+
+				</select>
 				<input type="submit" value="Upload Image" name="submit">
 </form>
 
@@ -31,5 +41,6 @@
 <?php
 		require('config.php');
 		require('file_upload.php');
+		require('save.php');
 ?>
 
