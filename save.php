@@ -13,8 +13,9 @@
 		$date = date("Y/m/d");
 		$inst = mysql_real_escape_string($_POST['inst']);
 		$img_path = $_SESSION['img'];
+		$status = 'Не отразен';
 
-		mysql_query("INSERT INTO `signal` (`id`, `fname`, `lname`, `email`, `number`, `date`, `location`, `description`, `inst`, `img_path`) VALUES (NULL, '$fname', '$lname', '$email', '$number', '$date', '$location', '$description', '$inst', '$img_path')");
+		mysql_query("INSERT INTO `signal` (`id`, `fname`, `lname`, `email`, `number`, `date`, `location`, `description`, `inst`, `img_path`,`status`) VALUES (NULL, '$fname', '$lname', '$email', '$number', '$date', '$location', '$description', '$inst', '$img_path', '$status')");
 
 	}
 
