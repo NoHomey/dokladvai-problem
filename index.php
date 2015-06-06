@@ -1,3 +1,4 @@
+
 <html>
 		<head>
 			<title>Home</title>
@@ -5,7 +6,8 @@
 		</head>
 		
 		<body>
-			<form align = "center" method="POST" >
+
+			<form action="index.php" method="post" enctype="multipart/form-data" align = "center">	
 				<p>Подател</p>
 				<input type = "text"placeholder = "име" name = "fname" /><br>
 				<input type = "text"placeholder = "фамилия" name = "lname" style = "margin-top:2px;" /><br>
@@ -16,22 +18,18 @@
 				<input type = "text"placeholder = "локация" name = "location"   required/><br>
 				<input type = "text"placeholder = "описание" name = "description" style = "margin-top:2px;"  required/><br>
 				
-				<input type = "submit" value = "изпрати" name = "submit" style = "margin-top:4px;">
-			</form>
+				Select image to upload:
+				<input type="file" name="fileToUpload" id="fileToUpload"><br>
+				<input type="submit" value="Upload Image" name="submit">
+</form>
+
 		</body>
 		
 		
 </html>
 
 <?php
-		mysql_connect("localhost", "root", "");
-		mysql_select_db("signal");
-		
-		//if(isset($_POST['submit'])){
-		//	$fname = $_POST['fname'];
-		
-		//	echo $fname;
-	//	}
+		require('config.php');
+		require('file_upload.php');
 ?>
-
 
