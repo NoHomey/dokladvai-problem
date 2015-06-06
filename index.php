@@ -5,16 +5,18 @@
 		</head>
 		
 		<body>
-			<form align = "center">
+			<form align = "center" method="POST" >
 				<p>Подател</p>
-				<input type = "text"placeholder = "име" id = "fname" /><br>
-				<input type = "text"placeholder = "фамилия" id = "lname" style = "margin-top:2px;" /><br>
-				<input type = "text"placeholder = "ел.поща" id = "email" style = "margin-top:2px;" /><br>
-				<input type = "text"placeholder = "телефон" id = "number" style = "margin-top:2px;" /><br>
+				<input type = "text"placeholder = "име" name = "fname" /><br>
+				<input type = "text"placeholder = "фамилия" name = "lname" style = "margin-top:2px;" /><br>
+				<input type = "text"placeholder = "ел.поща" name = "email" style = "margin-top:2px;" /><br>
+				<input type = "text"placeholder = "телефон" name = "number" style = "margin-top:2px;" /><br>
 				
 				<p>Сигнал</p>
-				<input type = "text"placeholder = "локация" id = "location"  /><br>
-				<input type = "text"placeholder = "описание" id = "description" style = "margin-top:2px;" /><br>
+				<input type = "text"placeholder = "локация" name = "location"   required/><br>
+				<input type = "text"placeholder = "описание" name = "description" style = "margin-top:2px;"  required/><br>
+				
+				<input type = "submit" value = "изпрати" name = "submit" style = "margin-top:4px;">
 			</form>
 		</body>
 		
@@ -24,6 +26,12 @@
 <?php
 		mysql_connect("localhost", "root", "");
 		mysql_select_db("signal");
+		
+		//if(isset($_POST['submit'])){
+		//	$fname = $_POST['fname'];
+		
+		//	echo $fname;
+	//	}
 ?>
 
 
