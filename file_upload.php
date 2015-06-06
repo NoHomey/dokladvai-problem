@@ -26,7 +26,7 @@ if(!empty($_POST["submit"])) {
 	&& $imageFileType != "gif" ) {
 		$uploadOk = 0;
 	}
-	$rand = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 8);
+	$rand = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 16);
 	$file_name = $target_dir . $rand . '.'. $imageFileType;
 	if ($uploadOk == 1) {
 		move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $file_name);
