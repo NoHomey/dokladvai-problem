@@ -19,7 +19,7 @@
 	$result = mysql_query($query);
 	while($row = mysql_fetch_row($result)){ 
 		echo "<tr>";
-		for($i = 0; $i < 10;++$i) {
+		for($i = 0; $i < 9;++$i) {
 	    	echo "<td>" . $row[$i] . "</td>";  
 	    }
 	   	echo "<td> <a href = ' $row[9]'><img src = ' $row[9]' height = 50px width = 50px /> </a> </td>";
