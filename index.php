@@ -6,7 +6,7 @@
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		</head>
 		
-		<body>
+		<!-- <body background = "bg.jpg"> -->
 
 			<form action="index.php" method="post" enctype="multipart/form-data" align = "center">	
 				<p>Подател</p>
